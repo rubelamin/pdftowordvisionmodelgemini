@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini Vision PDF to Word</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+            line-height: 1.6;
+            background-color: #fcfcfc;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .upload-box {
+            border: 2px dashed #4A90E2;
+            padding: 40px 20px;
+            text-align: center;
+            background: #f4f8ff;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button {
+            background-color: #4A90E2;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        button:hover {
+            background-color: #357ABD;
+        }
+
+        .btn-download {
+            background-color: #28a745;
+            text-decoration: none;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 15px;
+        }
+
+        .btn-download:hover {
+            background-color: #218838;
+        }
+
+        #loading {
+            display: none;
+            color: #555;
+            font-weight: bold;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        pre {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            padding: 20px;
+            border-radius: 6px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            max-height: 600px;
+            overflow-y: auto;
+            font-size: 14px;
+        }
+
+        .action-area {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>📝 Gemini Vision - PDF to Word Converter</h2>
+        <p style="color: #666;">Paid Speed Mode | Powered by Gemini 3.8 Flash</p>
+
+        <form action="/upload" method="post" enctype="multipart/form-data" onsubmit="showLoading()">
+            <div class="upload-box">
+                <input type="file" name="pdf_file" accept=".pdf" required><br><br>
+                <p>Upload your English PDF file to transcribe accurately.</p>
+            </div>
+            <div class="action-area">
+                <button type="submit">Start Vision Conversion</button>
+                {% if result %}
+                <a href="/download" class="btn-download">📥 Download Word (.docx) File</a>
+                {% endif %}
+            </div>
+        </form>
+
+        <div id="loading">🚀 Gemini Paid Mode is processing the pages at lightning speed... Please wait...</div>
+
+        {% if result %}
+        <h3 style="margin-top: 30px;">Extracted Content Preview:</h3>
+        <pre>{{ result }}</pre>
+        {% endif %}
+    </div>
+
+    <script>
+        function showLoading() {
+            document.getElementById('loading').style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>
