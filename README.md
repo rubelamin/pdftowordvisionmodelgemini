@@ -9,8 +9,9 @@ Unlike traditional PyMuPDF or open-source OCR tools (like Tesseract), this proje
 ## ✨ Features
 
 - **Vision-Based OCR Approach:** Converts PDF pages to high-resolution images before extraction.
+- **🌍 Multi-Language Support:** Automatically detects and transcribes multiple languages flawlessly (English, Bengali, Arabic, Spanish, Hindi, etc.) without translating them.
 - **Paid Speed Mode (No Rate Limits):** Zero delay, optimized for fast and bulk extraction.
-- **Contextual Correction:** Understands low-quality text and contextually transcribes it flawlessly.
+- **Contextual Correction:** Understands low-quality or dusty text and contextually transcribes it like a human.
 - **One-Click Word Export:** Creates and downloads structured `.docx` files directly from memory.
 - **Secure Environment:** Keeps your Gemini API keys safe using `.env` configurations.
 
