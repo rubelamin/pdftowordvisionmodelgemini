@@ -1,1 +1,6 @@
 .env
+venv/
+.venv/
+__pycache__/
+temp_uploads/
+*.docx
