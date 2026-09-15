@@ -114,7 +114,11 @@ Upload your English PDF file, wait for the lightning-fast conversion, and click 
 
 If this project saved your time or helped you with your workflows, feel free to buy me a coffee! ☕
 
-[![Buy Me A Coffee](https://shields.io)](https://buymeacoffee.com)
+<br>
+
+<a href="https://www.buymeacoffee.com/baghavai10G" target="_blank">
+  <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me a Coffee" style="height: 60px !important; width: 217px !important;">
+</a>
 
 ---
 
