@@ -21,7 +21,7 @@ Unlike traditional PyMuPDF or open-source OCR tools (like Tesseract), this proje
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com
+git clone https://github.com/rubelamin/pdftowordvisionmodelgemini.git
 cd YOUR_REPOSITORY_NAME
 ```
 
@@ -31,7 +31,7 @@ cd YOUR_REPOSITORY_NAME
 
 ```bash
 python -m venv .venv
-.venv\Scripts\activate
+source .venv\Scripts\activate
 ```
 
 **For Mac / Linux:**
@@ -52,7 +52,7 @@ pip install -r requirements.txt
 This application requires **Poppler** to convert PDF pages into images.
 
 - **Windows:**
-  1. Download the latest binary zip from [here](https://github.com).
+  1. Download the latest binary zip from [here](https://github.com/oschwartz10612/poppler-windows/releases).
   2. Extract it and move the folder to `C:\poppler`.
   3. Ensure the binary path `C:\poppler\Library\bin` matches the path in `server.py`.
 - **Mac (Using Homebrew):**
@@ -68,7 +68,7 @@ This application requires **Poppler** to convert PDF pages into images.
 
 ## 🔑 Getting Your Gemini API Key
 
-1. Go to **[Google AI Studio](https://google.com)** and log in with your Google account.
+1. Go to **[Google AI Studio](https://aistudio.google.com/)** and log in with your Google account.
 2. Click on **"Get API key"** and select **"Create API Key"**.
 3. _Optional for Paid Speed Mode:_ Click on **"Set up billing"** / **"Upgrade to Paid Tier"** and link your credit card to activate the high-speed tier.
 4. Copy your API Key.
