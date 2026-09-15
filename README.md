@@ -90,7 +90,7 @@ python server.py
 _Note: For Mac/Linux, you might need to use `python3 server.py`._
 
 Once running, open your web browser and go to:
-👉 **`http://127.0.0`**
+👉 **`http://127.0.0.1:5000`**
 
 Upload your English PDF file, wait for the lightning-fast conversion, and click **Download Word (.docx) File**.
 
