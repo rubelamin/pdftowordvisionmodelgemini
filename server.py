@@ -135,19 +135,23 @@ def download_docx():
     doc = Document()
     pages_data = text_content.split("--- PAGE ")
     
-    for page_data in pages_data:
-        if not page_data.strip():
-            continue
-        
-        lines = page_data.strip().split('\n', 1)
+    # খালি বা স্পেস ওয়ালা এলিমেন্টগুলো ফিল্টার করে শুধু আসল পেজগুলো নেওয়া
+    valid_pages = [p.strip() for p in pages_data if p.strip()]
+    total_valid_pages = len(valid_pages)
+    
+    for index, page_data in enumerate(valid_pages):
+        lines = page_data.split('\n', 1)
         if len(lines) > 1:
-            actual_text = lines[1]
+            actual_text = lines[1] # পেজ নম্বরের নিচের আসল টেক্সটটুকু নেওয়া
+            
             paragraphs = actual_text.split('\n\n')
             for para in paragraphs:
                 if para.strip():
                     doc.add_paragraph(para.strip())
             
-            doc.add_page_break()
+            # শর্ত: যদি এটি একদম শেষ পেজ না হয়, শুধুমাত্র তখনই পেজ ব্রেক দেওয়া হবে
+            if index < total_valid_pages - 1:
+                doc.add_page_break()
 
     docx_buffer = io.BytesIO()
     doc.save(docx_buffer)
@@ -159,6 +163,7 @@ def download_docx():
         download_name="Gemini_Converted_Document.docx",
         mimetype="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
     )
+
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)

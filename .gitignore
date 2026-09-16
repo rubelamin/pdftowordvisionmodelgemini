@@ -5,3 +5,5 @@ __pycache__/
 temp_uploads/
 *.docx
 serverFullPdfWay.py
+serverTranslator.py
+templates/index-translate.html

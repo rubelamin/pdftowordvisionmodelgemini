@@ -17,13 +17,33 @@ Unlike traditional PyMuPDF or open-source OCR tools (like Tesseract), this proje
 
 ---
 
+## 🌟 PRO Features (Exclusive Premium Version)
+
+Looking for more than just a standard OCR? We have a **Premium/PRO Version** available with advanced enterprise capabilities that are kept private from this public repository.
+
+### 🔥 What's inside the PRO version?
+
+- **AI-Powered PDF Translation Mode:** Directly upload a PDF in one language (e.g., English) and instantly download the fully translated version in another language (e.g., Bengali, Arabic, Spanish, Hindi) while keeping the **exact original layout, lists, and paragraph structures**.
+- **Batch Processing:** Upload and convert multiple heavy PDF files simultaneously.
+- **Advanced Document Styling:** Automatically applies premium font weights, alignment corrections, and professional layout formatting tailored for business reports and legal documents.
+
+### 💼 Get the PRO Version / Hire for Custom Development
+
+If you need the **PRO Version** source code or want to integrate custom AI automation features into your business workflows, feel free to reach out directly via WhatsApp:
+
+👉 **[Click Here to Chat on WhatsApp](https://wa.me/rubelaminbd)**  
+📞 **WhatsApp Username:** `@rubelaminbd`
+📩 **E-mail:** `bagha.vai100@gmail.com`
+
+---
+
 ## 🛠️ Prerequisites & Installation
 
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/rubelamin/pdftowordvisionmodelgemini.git
-cd YOUR_REPOSITORY_NAME
+git clone https://github.com
+cd pdftowordvisionmodelgemini
 ```
 
 ### 2. Set Up a Virtual Environment
